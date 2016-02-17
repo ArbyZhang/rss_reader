@@ -24,6 +24,8 @@ def rss_feed_parse(arg):
     else:
         while 1:
             address = input('Where do you want to save this file: ')
+            if address[-1] != '/':
+                address = address + '/'
             name = input('file name: ')
             address_name = address + name
             try:
